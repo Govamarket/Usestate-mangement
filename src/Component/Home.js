@@ -1,5 +1,8 @@
-import React, { useState } from "react";
-
+import React, { createContext, useContext, useState } from "react";
+import { create } from "zustand";
+import CounterAct from "./CounterAct";
+import HookCounter from "./HookCounter";
+import HookCounterTwo from "./HookCounterTwo";
 // Usestate methods
 
 function NameList() {
@@ -7,6 +10,7 @@ function NameList() {
   const [name, setName] = useState("");
 
   const onAddName = () => {
+    // list.push(name);
     setList([...list, name]);
     setName("");
   };
@@ -33,7 +37,7 @@ function NameList() {
 
 const Counter = () => {
   const [count, setCount] = useState(10);
-  const [startCount, initiaCount] = useState(0);
+  // const [startCount, initiaCount] = useState(0);
 
   function addOne() {
     setCount(count - 1);
@@ -44,22 +48,48 @@ const Counter = () => {
         <button onClick={addOne}>Count = {count}</button>
       </section>
 
-      <button onClick={() => initiaCount(startCount + 1)}>
+      {/* <button onClick={() => initiaCount(startCount + 1)}>
         Start ={startCount}
-      </button>
+      </button> */}
     </div>
   );
 };
 
+// Zustand method
+/*External State Management (Redux, Zustand, Jotai)
+For large-scale apps, external libraries provide better performance and dev tools.
+
+When to Use Redux/Zustand/Jotai
+✅ Best for:
+
+Enterprise apps with complex state
+
+When you need time-travel debugging (Redux)
+
+Optimized performance for frequent updates
+*/
+
+const useStore = create((set) => ({
+  count: 0,
+  increment: () => set((state) => ({ count: state.count + 1 })),
+}));
+
+function CounterOne() {
+  const { count, increment } = useStore();
+  return <button onClick={increment}>✅:{count}</button>;
+}
+
 function Home() {
   return (
-    <div>
-      <Counter />
-      <Counter />
-      <Counter />
+    <div className="content">
       <Counter />
       <NameList />
       <onAddName />
+      <CounterOne />
+      {/* <App /> */}
+      <CounterAct />
+      <HookCounter />
+      <HookCounterTwo />
     </div>
   );
 }
