@@ -3,6 +3,9 @@ import { create } from "zustand";
 import CounterAct from "./CounterAct";
 import HookCounter from "./HookCounter";
 import HookCounterTwo from "./HookCounterTwo";
+import HookCounterThree from "./HookCounterThree";
+import HookCounterFour from "./HookCounterFour";
+import HookCounterOne from "./HookCounterOne";
 // Usestate methods
 
 function NameList() {
@@ -90,6 +93,9 @@ function Home() {
       <CounterAct />
       <HookCounter />
       <HookCounterTwo />
+      <HookCounterThree />
+      <HookCounterFour />
+      <HookCounterOne />
     </div>
   );
 }

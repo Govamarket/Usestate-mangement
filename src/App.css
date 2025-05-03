@@ -11,8 +11,10 @@
 .content{
     display: grid;
     place-content: center;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     row-gap: 3rem;
     padding: 4rem;
+    column-gap: 2rem;
+    gap: 2rem;
 }
 
