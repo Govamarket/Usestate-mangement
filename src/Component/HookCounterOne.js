@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+// Use effect pattern
+
 const HookCounterOne = () => {
   const [count, setCount] = useState(0);
 

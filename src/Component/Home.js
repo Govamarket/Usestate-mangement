@@ -6,6 +6,9 @@ import HookCounterTwo from "./HookCounterTwo";
 import HookCounterThree from "./HookCounterThree";
 import HookCounterFour from "./HookCounterFour";
 import HookCounterOne from "./HookCounterOne";
+import MouseContainer from "./MouseContainer";
+import MainCart from "./mainCart";
+
 // Usestate methods
 
 function NameList() {
@@ -89,13 +92,14 @@ function Home() {
       <NameList />
       <onAddName />
       <CounterOne />
-      {/* <App /> */}
       <CounterAct />
       <HookCounter />
       <HookCounterTwo />
       <HookCounterThree />
       <HookCounterFour />
       <HookCounterOne />
+      <MouseContainer />
+      <MainCart />
     </div>
   );
 }

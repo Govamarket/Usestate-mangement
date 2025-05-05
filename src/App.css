@@ -18,3 +18,36 @@
     gap: 2rem;
 }
 
+.container{
+    padding: 5vh;
+    max-width: 100%;
+    height: auto;
+    background: rgb(2, 39, 2);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.container li{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 2vh;
+
+}
+
+.section{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 20px;
+}
+
+.section input{
+    height: 4vh;
+    text-align: center;
+    outline: 0;
+    color: #000;
+}
+
+
+
