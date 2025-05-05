@@ -37,7 +37,7 @@ const MainCart = () => {
         {items.map((item, index) => (
           <li key={item}>
             <span style={{ width: "40%" }}>{item}</span>
-            <button onClick={() => editItem(index, prompt("edit item", items))}>
+            <button onClick={() => editItem(index, prompt("edit item", item))}>
               edit
             </button>
             <button onClick={() => deleteItem(index)}>delete</button>

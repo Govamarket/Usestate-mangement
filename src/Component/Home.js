@@ -8,6 +8,8 @@ import HookCounterFour from "./HookCounterFour";
 import HookCounterOne from "./HookCounterOne";
 import MouseContainer from "./MouseContainer";
 import MainCart from "./mainCart";
+import IntervalCounter from "./IntervalCounter";
+import DataFetching from "./DataFetching";
 
 // Usestate methods
 
@@ -100,6 +102,8 @@ function Home() {
       <HookCounterOne />
       <MouseContainer />
       <MainCart />
+      <IntervalCounter />
+      <DataFetching />
     </div>
   );
 }
