@@ -1,12 +1,12 @@
 import React from "react";
-import { useContext, channelContext } from "../App";
+import { UseContext, ChannelContext } from "../App";
 export const ComponentF = () => {
   return (
     <div>
-      <useContext.Consumer>
+      <UseContext.Consumer>
         {(user) => {
           return (
-            <channelContext.Consumer>
+            <ChannelContext.Consumer>
               {(channel) => {
                 return (
                   <div>
@@ -15,10 +15,10 @@ export const ComponentF = () => {
                 );
               }}
               {/* <div>User context value {user}</div> */}
-            </channelContext.Consumer>
+            </ChannelContext.Consumer>
           );
         }}
-      </useContext.Consumer>
+      </UseContext.Consumer>
     </div>
   );
 };
